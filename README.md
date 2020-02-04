@@ -1,2 +1,2 @@
-# IMDB Telegram Bot
-Keep you updated with popular IMDB movies.
+# YTS Telegram Bot
+Keep you updated with popular YTS movies.
