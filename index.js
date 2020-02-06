@@ -39,9 +39,15 @@ const getMovies = callback => {
   });
 };
 
-setInterval(function() {
-  alert("Hello");
-}, 100000);
+// app.get("/", (req, res) => {
+//   getMovies(movies => {
+//     res.render("index", {});
+//   });
+// });
+
+// setInterval(function() {
+//   alert("Hello");
+// }, 100000);
 
 //This is the route the API will call
 app.post("/", function(req, res) {
