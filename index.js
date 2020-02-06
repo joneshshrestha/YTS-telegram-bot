@@ -19,25 +19,23 @@ app.use(
   })
 ); // for parsing application/x-www-form-urlencoded
 
-const getMovies = callback => {
-  request("https://yts.mx/", (error, response, html) => {
-    if (!error && response.statusCode == 200) {
-      const movies = [];
-      const $ = cheerio.load(html);
+request("https://yts.mx/", (error, response, html) => {
+  if (!error && response.statusCode == 200) {
+    const movies = [];
+    const $ = cheerio.load(html);
 
-      $(".popular-downloads").each((i, el) => {
-        const title = $(el)
-          .find("a")
-          .text();
-        const link = $(el)
-          .find("a")
-          .attr("href");
-        movies.push({ title, link });
-      });
-      callback(movies);
-    }
-  });
-};
+    $(".popular-downloads").each((i, el) => {
+      const title = $(el)
+        .find("a")
+        .text();
+      const link = $(el)
+        .find("a")
+        .attr("href");
+      movies.push({ title, link });
+    });
+    callback(movies);
+  }
+});
 
 // app.get("/", (req, res) => {
 //   getMovies(movies => {
