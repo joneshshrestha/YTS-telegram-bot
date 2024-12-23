@@ -23,7 +23,7 @@
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.21.2",
     "node-telegram-bot-api": "^0.40.0",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.22",
     "telegram-bot-api": "^2.0.1"
   }
 }
